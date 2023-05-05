@@ -17,10 +17,8 @@ To ``config/initializers/omniauth.rb`` add:
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :rwgps, Rails.application.secrets.rwgps_client_id, Rails.application.secrets.rwgps_api_key, scope: 'public'
+  provider :rwgps, Rails.application.secrets.rwgps_client_id, Rails.application.secrets.rwgps_api_key
 end
 ```
-
-It seems that the only value for `scope` right now is `user`.
 
 Please refer to the [Omniauth documentation](https://github.com/intridea/omniauth) on how to use Omniauth.
